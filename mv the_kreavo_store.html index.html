@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE KREAVO | Premium Handmade Crochet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-muted: #707070;
+            --accent: #a67c52; 
+            --sale-color: #c94c4c;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.4s ease;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: #fff;
+        }
+
+        .logo-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #f0f0f0;
+            padding: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: white;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .brand-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 10px 0 5px;
+            font-weight: 500;
+        }
+
+        .handmade-verify {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .shipping-note {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 80px 0 40px;
+        }
+
+        .section-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px 40px;
+            padding: 0 20px 80px;
+        }
+
+        .card {
+            position: relative;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .image-wrapper {
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            background: #f9f9f9;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card:hover img {
+            transform: scale(1.03);
+        }
+
+        .sale-label {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--sale-color);
+            color: white;
+            padding: 4px 12px;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .info h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            margin: 0 0 5px 0;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #b0b0b0;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .description {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .order-btn {
+            display: block;
+            border-bottom: 1px solid var(--text-dark);
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 5px 0;
+            width: fit-content;
+        }
+
+        .card:hover .order-btn {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        footer {
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            background: #fafafa;
+        }
+
+        .ig-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container" onclick="window.open('https://www.instagram.com/thekreavo/', '_blank')" style="cursor:pointer;">
+        <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/2026-03-11%20(6).png" alt="The Kreavo Logo">
+    </div>
+    <div class="handmade-verify">Properly Handmade Precision</div>
+    <h1 class="brand-title">THE KREAVO</h1>
+    <div class="shipping-note">
+        Handcrafted in <strong>Assam</strong> • <strong>PAN India</strong> Shipping
+    </div>
+</header>
+
+<div class="section-header">
+    <h2>Everlasting Florals</h2>
+</div>
+
+<div class="container">
+    <div class="card" onclick="window.open('https://www.instagram.com/p/DVJMqp8Emrg/?img_index=2', '_blank')">
+        <div class="sale-label">Collection Sale</div>
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/sun.jfif" alt="Sunflower">
+        </div>
+        <div class="info">
+            <h3>Sunflower Mornings</h3>
+            <div class="price"><span class="old-price">₹650</span>₹495</div>
+            <span class="order-btn">View on Instagram</span>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://www.instagram.com/p/DU8P4Vdkgkx/?img_index=3', '_blank')">
+        <div class="sale-label">Collection Sale</div>
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/rose.jfif" alt="Rose">
+        </div>
+        <div class="info">
+            <h3>Red Rose Single Bouquet</h3>
+            <div class="price"><span class="old-price">₹250</span>₹160</div>
+            <span class="order-btn">View on Instagram</span>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://www.instagram.com/p/DUkwXcsEku1/?img_index=3', '_blank')">
+        <div class="sale-label">Collection Sale</div>
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/lily.jfif" alt="Lily">
+        </div>
+        <div class="info">
+            <h3>White Lily</h3>
+            <div class="price"><span class="old-price">₹380</span>₹270</div>
+            <span class="order-btn">View on Instagram</span>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://www.instagram.com/p/DUcpvNlklus/?img_index=1', '_blank')">
+        <div class="sale-label">Collection Sale</div>
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/daises.jfif" alt="Daisies">
+        </div>
+        <div class="info">
+            <h3>Sunshine Dreams</h3>
+            <div class="price"><span class="old-price">₹700</span>₹550</div>
+            <span class="order-btn">View on Instagram</span>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://www.instagram.com/p/DUI2Q93Eidm/?img_index=3', '_blank')">
+        <div class="sale-label">Collection Sale</div>
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/pink%20tulip.jfif" alt="Tulip">
+        </div>
+        <div class="info">
+            <h3>Pink Dreams</h3>
+            <div class="price"><span class="old-price">₹400</span>₹265</div>
+            <span class="order-btn">View on Instagram</span>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://www.instagram.com/p/DUFvpnkEsvB/?img_index=3', '_blank')">
+        <div class="sale-label">Collection Sale</div>
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/sunflower%202x.jfif" alt="Sunflower">
+        </div>
+        <div class="info">
+            <h3>Yellow Charm</h3>
+            <div class="price"><span class="old-price">₹620</span>₹490</div>
+            <span class="order-btn">View on Instagram</span>
+        </div>
+    </div>
+</div>
+
+<div class="section-header">
+    <h2>Accessories & Keepsakes</h2>
+</div>
+
+<div class="container">
+    <div class="card" onclick="window.open('https://ig.me/m/thekreavo', '_blank')">
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/softy%20keyring.jfif" alt="Softy">
+        </div>
+        <div class="info">
+            <h3>Softy Keyring</h3>
+            <div class="price">₹60</div>
+            <span class="order-btn">Inquire via DM</span>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://ig.me/m/thekreavo', '_blank')">
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/sundflower%20ring.jfif" alt="Sunflower Ring">
+        </div>
+        <div class="info">
+            <h3>Sunflower Keyring</h3>
+            <div class="price">₹70</div>
+            <span class="description">Variant: ₹120 for double</span>
+            <span class="order-btn">Inquire via DM</span>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://ig.me/m/thekreavo', '_blank')">
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/bow%20butter.jfif" alt="Bow">
+        </div>
+        <div class="info">
+            <h3>Butter Bow Keyring</h3>
+            <div class="price">₹80</div>
+            <span class="description">Double Layered Finish</span>
+            <span class="order-btn">Inquire via DM</span>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://ig.me/m/thekreavo', '_blank')">
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/double%20flower.jfif" alt="Bookmark">
+        </div>
+        <div class="info">
+            <h3>Double Flower Bookmark</h3>
+            <div class="price">₹95</div>
+            <span class="order-btn">Inquire via DM</span>
+        </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://ig.me/m/thekreavo', '_blank')">
+        <div class="image-wrapper">
+            <img src="https://uploads.onecompiler.io/44ftx2uva/44g3xd8by/black.jfif" alt="Star">
+        </div>
+        <div class="info">
+            <h3>Blackpink Jisoo Star Keychain</h3>
+            <div class="price">₹140</div>
+            <span class="order-btn">Inquire via DM</span>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>THE KREAVO STUDIO &copy; 2026</p>
+    <p>Follow and order on Instagram: <a href="https://www.instagram.com/thekreavo/" target="_blank" class="ig-link">@thekreavo</a></p>
+</footer>
+
+</body>
+</html>
